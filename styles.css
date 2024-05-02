@@ -1,138 +1,141 @@
-html,body{
-   height: 100%;
-   margin: 0px;
-   padding: 0px;
-   color: rgb(209, 204, 204);
+
+/*
+html, body{Have to include the body element here so that the margin effect below applies to it.
+  height: 100%;
+  margin: 0;Makes sure that there is no margin between the flex boxes and the window edge.
+ 
+}
+*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-content{
+  float: right;
+  width: 100%;
+  height: 40px;
+  display : block;
+  background-color: rgb(89, 91, 89);
+  font-weight: bold;
   
 }
-::selection {/*this changes the highlighting colors of text. */
-   background: #5dcbc5;
-   color: #000;
+.header-content ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid green;
 }
-.holder{
-   height: 100%;
-   position: relative;
-   background-color: rgb(47, 46, 46);
-   background-size: 100% auto;
+.header-content li{
+  padding-top:10px;
+  padding-right: 15px;
+  height: 15px;
+  width: 80px;
+  text-align: left;
+  border: 2px solid orange;
 }
-.header{
-   float: right;
-   width: 100%;
-   height: 40px;
-   display : block;
-   background-color: rgb(89, 91, 89);
-   font-weight: bold;
+.header-content a{
+  color: rgb(209, 204, 204);
+  text-decoration: none;
+  border: 2px solid purple;
 }
-.header li{
-   padding-left: 15px;
-   padding-right: 15px;
-   height: 15px;
-   display: table;
-   float: right;
+
+.body-content{
+  height: 100%;
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 20px;
 }
-.header a{
-   text-decoration: none;
-   color: rgb(209, 204, 204);
-   font-family: Arial, Helvetica, sans-serif;
-   
+.aFlexbox{
+  padding: 25px;
+  border: 2px solid pink;
 }
-.footer{
-   background-color: rgb(89, 91, 89);
-   bottom: 0;
-   height: 100px;
-   left: 0;
-   position: fixed;/*Relative keeps the footer at the bottom of the page, regardless of how large the body box is.*/
-   right: 0;
-   font-weight: bold;
+footer{
+  background-color: rgb(89, 91, 89);
+  bottom: 0;
+  height: 45px;
+  left: 0;
+  position: static;/*Relative keeps the footer at the bottom of the page, regardless of how large the body box is.*/
+  right: 0;
+  font-weight: bold;
 }
-.titlename{
-   text-align: center;
-   margin-top: 0px;
-   margin: auto;
-   width: 50%;
-   font-size: 70px;
-}
-.job-title{
-   text-align: center;
- 
-   margin: auto;
-   width: 50%;
-   font-size: 35px;
-}
-.footer-text{
-   margin-top: 75px;
-   text-align: center;
-}
-.notice{
-   margin-top: 0px;
+.footer-text{/*This is for the text in the footer*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 /*rest of this code is to animate the header href links when hovering over them with the cursor. I altered the code to fit my use, but original animation is from: https://codepen.io/jesperkc/pen/YaGYRr*/
-
 a{
    
-   color: #000;
-   span{
-     font-weight: 100;
-     transition: all .5s;
+  color: #000;
+  span{
+     
+    font-weight: 100;
+    transition: all .5s;
+  }
+  span:nth-child(2){
+    transition-delay: .05s;
+  }
+  span:nth-child(3){
+    transition-delay: .1s;
+  }
+  span:nth-child(4){
+    transition-delay: .15s;
+  }
+  span:nth-child(5){
+     transition-delay: .20s;
    }
-   span:nth-child(2){
-     transition-delay: .05s;
+   span:nth-child(6){
+     transition-delay: .25s;
    }
-   span:nth-child(3){
-     transition-delay: .1s;
+   span:nth-child(7){
+     transition-delay: .30s;
    }
-   span:nth-child(4){
-     transition-delay: .15s;
-   }
-   span:nth-child(5){
-      transition-delay: .20s;
-    }
-    span:nth-child(6){
-      transition-delay: .25s;
+  &:hover{
+     
+      span{
+      font-weight: 700;
     }
     span:nth-child(7){
-      transition-delay: .30s;
-    }
-   &:hover{
-      
-       span{
-       font-weight: 700;
-     }
-     span:nth-child(7){
-      transition-delay: .30s;
-    }
-    span:nth-child(6){
-      transition-delay: .25s;
-    }
-    span:nth-child(5){
-      transition-delay: .20s;
-    }
-     span:nth-child(4){
-       transition-delay: .15s;
-     }
-     span:nth-child(3){
-       transition-delay: .1s;
-     }
-     span:nth-child(2){
-       transition-delay: .05s;
-     }
-     span:nth-child(1){
-       transition-delay: 0s;
-     }
+     transition-delay: .30s;
    }
-   &.hover-shadow{
+   span:nth-child(6){
+     transition-delay: .25s;
+   }
+   span:nth-child(5){
+     transition-delay: .20s;
+   }
+    span:nth-child(4){
+      transition-delay: .15s;
+    }
+    span:nth-child(3){
+      transition-delay: .1s;
+    }
+    span:nth-child(2){
+      transition-delay: .05s;
+    }
+    span:nth-child(1){
+      transition-delay: 0s;
+    }
+  }
+  &.hover-shadow{
+    &:hover{
+     
+     color: black;
+    text-shadow: 1px 1px 0px black, 2px 2px 0px black, 3px 3px 0px black;
+    }
+  }
+  &.hover-color{
+     
      &:hover{
-      
-      color: black;
-     text-shadow: 1px 1px 0px black, 2px 2px 0px black, 3px 3px 0px black;
-     }
-   }
-   &.hover-color{
-      
-      &:hover{
-      color: black;
-     border-color: darkmagenta;
-     }
-   }
- }
+     color: black;
+    border-color: darkmagenta;
+    }
+  }
+}
