@@ -6,10 +6,17 @@ html, body{Have to include the body element here so that the margin effect below
  
 }
 */
+
+@font-face{/*This sets the font to the custom that I have imported in the .ttf file.*/
+  font-family: customFont;
+  src:url(TitilliumWeb-Regular.ttf);
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: customFont;
 }
 
 .header-content{
