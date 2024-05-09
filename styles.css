@@ -1,90 +1,198 @@
 
-/*
-html, body{Have to include the body element here so that the margin effect below applies to it.
-  height: 100%;
-  margin: 0;Makes sure that there is no margin between the flex boxes and the window edge.
- 
-}
-*/
-
 @font-face{/*This sets the font to the custom that I have imported in the .ttf file.*/
   font-family: customFont;
   src:url(TitilliumWeb-Regular.ttf);
 }
+::selection{/*This sets the highlight coloring for the website.*/
+  color: #112D32;/*This is the font color when it is highlighted*/
+  background: #6E6658;/*This is the higlighted color behind text.*/
+}
+/* Experimenting here. Nothing to see.
+::marker{
+  color: #112D32;
+  content: '\f192  ';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  font-size: 15px;
+}*/
+div{
+  max-width: 100%;
+}
+.swiper-pagination {
+  bottom: calc(100% - 2rem);
+}
+
+
 
 *{
+  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: customFont;
+  font-weight: 600;
+  font-size: 18px;
+  color: #112D32;/*Sets the color of the font for the whole website.*/
 }
-
 .header-content{
-  float: right;
+  display: flex;
+  /*border: 2px solid yellow;*/
+  height: 10%;
   width: 100%;
-  height: 40px;
-  display : block;
-  background-color: rgb(89, 91, 89);
+  background-color: rgb(136, 189, 188);
   font-weight: bold;
   
 }
 .header-content ul{
-  list-style-type: none;
   display: flex;
+  flex-grow:1;/*This makes the holder for the about and contact buttons stay at the top right of the screen.*/
   justify-content: flex-end;
-  border: 2px solid green;
-}
-.header-content li{
-  padding-top:10px;
-  padding-right: 15px;
-  height: 15px;
-  width: 80px;
-  text-align: left;
-  border: 2px solid orange;
-}
-.header-content a{
-  color: rgb(209, 204, 204);
-  text-decoration: none;
-  border: 2px solid purple;
+  /*border: 2px solid green;*/
+  margin-right: 15px;
 }
 
+#ID{/*This is the logo at the top left of the page.*/
+  /*border: 2px solid pink;*/
+  margin: 15px;
+}
+.header-content li{
+  /*border: 2px solid orange;*/
+  margin-top: 10px;
+  list-style-type: none;
+  
+}
+.header-content a{
+  text-decoration: none;
+  /*border: 2px solid purple;*/
+  margin: 5px;
+  
+}
+span{
+  margin: 0.25px;/*Keeps the ABOUT and CONTACT from pushing each other around.*/
+}
+h1{
+  font-size:70px;
+}
+#summary{
+  margin-top:50px; 
+  margin-bottom:50px;
+}
+h2{
+  font-size: 40px;
+  margin-top:50px; 
+  margin-bottom: 20px;
+}
 .body-content{
   height: 100%;
   width: 100%;
-  border: 2px solid red;
+  /*border: 2px solid red;*/
+  background-color:rgb(136, 189, 188);
   display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-around;
+  /*flex-direction: column;*/
   flex-direction: column;
   padding: 20px;
+
+}
+#Exp{
+  width: 600px;
+}
+.aList{
+  margin-left: 23px;
+}
+li{
+  margin:5px;
+}
+.section{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.section2{
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 .aFlexbox{
+  width: 600px;
+}
+.grid{
+  margin: 20px;
+	padding: 2px;
+	transition: grid-template-rows 1s;
+	display: grid;
+	grid-template-rows:  399px;
+  border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
+
+}
+.aFlexbox2{
+  overflow: hidden;
   padding: 25px;
-  border: 2px solid pink;
+  max-width: 600px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
+  transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
+}
+
+.aFlexbox2:hover{
+  transform: scale(1.015);
+}
+.grid:hover{
+  transform: scale(1.015);
+  
+}
+#first:hover{/*These hovers control the length the grid elements expand to when hovered over. */
+  grid-template-rows:  1435px;
+  
+ 
+  
+}
+#second:hover{
+  grid-template-rows:  1335px;
+  
+}
+#third:hover{
+  grid-template-rows:  885px;
+  
+}
+#fourth:hover{
+  grid-template-rows:  610px;
+  
 }
 footer{
-  background-color: rgb(89, 91, 89);
+  background-color: #254E58;
   bottom: 0;
-  height: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   left: 0;
   position: static;/*Relative keeps the footer at the bottom of the page, regardless of how large the body box is.*/
   right: 0;
   font-weight: bold;
 }
 .footer-text{/*This is for the text in the footer*/
-  margin-top: 0px;
+  
   margin-bottom: 0px;
   text-align: center;
+  
 }
-
-/*rest of this code is to animate the header href links when hovering over them with the cursor. I altered the code to fit my use, but original animation is from: https://codepen.io/jesperkc/pen/YaGYRr*/
+#shortcuts{
+  color:rgb(136, 189, 188);
+  margin: 10px;
+  transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
+}
+#shortcuts:hover{
+  transform: scale(2);
+}
+/*This code is to animate the header href links when hovering over them with the cursor. I altered the code to fit my use, but original animation is from: https://codepen.io/jesperkc/pen/YaGYRr*/
 a{
-   
+ 
   color: #000;
   span{
-     
-    font-weight: 100;
-    transition: all .5s;
+    
+    font-size: 18px;
+    font-weight: normal;
+    transition: all .4s;
   }
   span:nth-child(2){
     transition-delay: .05s;
@@ -105,9 +213,9 @@ a{
      transition-delay: .30s;
    }
   &:hover{
-     
-      span{
-      font-weight: 700;
+    span{
+    font-weight: bold;
+    
     }
     span:nth-child(7){
      transition-delay: .30s;
@@ -133,16 +241,30 @@ a{
   }
   &.hover-shadow{
     &:hover{
-     
-     color: black;
+    color: black;
     text-shadow: 1px 1px 0px black, 2px 2px 0px black, 3px 3px 0px black;
     }
   }
   &.hover-color{
-     
+    
+    
      &:hover{
      color: black;
+    
     border-color: darkmagenta;
     }
   }
+}
+
+/*Below is the styling for the scrollbar.*/
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(136, 189, 188);
+}
+::-webkit-scrollbar-thumb{
+  width: 15px;
+  background: linear-gradient(#112D32, #254E58, #112D32);
+  
 }
