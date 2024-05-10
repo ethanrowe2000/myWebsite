@@ -3,29 +3,90 @@
   font-family: customFont;
   src:url(TitilliumWeb-Regular.ttf);
 }
+
 ::selection{/*This sets the highlight coloring for the website.*/
   color: #112D32;/*This is the font color when it is highlighted*/
   background: #6E6658;/*This is the higlighted color behind text.*/
 }
-/* Experimenting here. Nothing to see.
-::marker{
-  color: #112D32;
-  content: '\f192  ';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 700;
-  font-size: 15px;
-}*/
-div{
-  max-width: 100%;
+body{
+  min-height: 100vh;
 }
-.swiper-pagination {
-  bottom: calc(100% - 2rem);
+.button{
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 215px;
+  margin-top: 328px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  transition: 0.3s;
+}
+.button:hover{
+  transform: scale(1.15);
 }
 
-
-
-*{
-  
+#hideButton1{
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 215px;
+  margin-top: 1445px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  transition: 0.3s;
+}
+#hideButton2{
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 215px;
+  margin-top: 1320px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  transition: 0.3s;
+}
+#hideButton3{
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 215px;
+  margin-top: 865px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  transition: 0.3s;
+}
+#hideButton4{
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 215px;
+  margin-top: 590px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  transition: 0.3s;
+}
+#hideButton1:hover{
+  transform: scale(1.15);
+}
+#hideButton2:hover{
+  transform: scale(1.15);
+}
+#hideButton3:hover{
+  transform: scale(1.15);
+}
+#hideButton4:hover{
+  transform: scale(1.15);
+}
+*{ 
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -41,7 +102,6 @@ div{
   width: 100%;
   background-color: rgb(136, 189, 188);
   font-weight: bold;
-  
 }
 .header-content ul{
   display: flex;
@@ -59,13 +119,11 @@ div{
   /*border: 2px solid orange;*/
   margin-top: 10px;
   list-style-type: none;
-  
 }
 .header-content a{
   text-decoration: none;
   /*border: 2px solid purple;*/
   margin: 5px;
-  
 }
 span{
   margin: 0.25px;/*Keeps the ABOUT and CONTACT from pushing each other around.*/
@@ -94,7 +152,6 @@ h2{
   /*flex-direction: column;*/
   flex-direction: column;
   padding: 20px;
-
 }
 #Exp{
   width: 600px;
@@ -123,7 +180,6 @@ li{
 	display: grid;
 	grid-template-rows:  399px;
   border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
-
 }
 .aFlexbox2{
   overflow: hidden;
@@ -134,47 +190,24 @@ li{
   border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
   transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
 }
-
 .aFlexbox2:hover{
   transform: scale(1.015);
 }
 .grid:hover{
   transform: scale(1.015);
-  
-}
-#first:hover{/*These hovers control the length the grid elements expand to when hovered over. */
-  grid-template-rows:  1435px;
-  
- 
-  
-}
-#second:hover{
-  grid-template-rows:  1335px;
-  
-}
-#third:hover{
-  grid-template-rows:  885px;
-  
-}
-#fourth:hover{
-  grid-template-rows:  610px;
-  
 }
 footer{
   background-color: #254E58;
-  bottom: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  left: 0;
-  position: static;/*Relative keeps the footer at the bottom of the page, regardless of how large the body box is.*/
-  right: 0;
   font-weight: bold;
+  bottom: 0;
+  width:100%;
+ 
 }
 .footer-text{/*This is for the text in the footer*/
-  
   margin-bottom: 0px;
   text-align: center;
-  
 }
 #shortcuts{
   color:rgb(136, 189, 188);
@@ -255,7 +288,6 @@ a{
     }
   }
 }
-
 /*Below is the styling for the scrollbar.*/
 ::-webkit-scrollbar{
   width: 15px;
@@ -266,5 +298,76 @@ a{
 ::-webkit-scrollbar-thumb{
   width: 15px;
   background: linear-gradient(#112D32, #254E58, #112D32);
+}
+
+#contactPage{
+  height: 100%;
+  width: 100%;
   
+  background-color:rgb(136, 189, 188);
+  display: flex;
+  align-items: center;
+ min-height: 1000px;
+  
+  flex-direction: column;
+  padding: 20px;
+}
+#nameRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+
+  overflow: hidden;
+  padding: 25px;
+  
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
+  transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
+}
+.input-fieldName{
+  
+  width: 247px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  outline: none;
+}
+#input-field{
+  width: 500px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  outline: none;
+  
+}
+#submitButton{
+  height: 40px;
+  width: 115px;
+  background-color:#112D32;
+  color:rgb(136, 189, 188);
+  border-radius:10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+#submitButton:hover{
+  transform: scale(1.15);
+}
+.message{
+  min-height: 300px;
+}
+form{
+  max-width: 500px;
 }

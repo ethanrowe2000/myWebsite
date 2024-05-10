@@ -7,6 +7,7 @@
         <title>Ethan Rowe</title>
         <link rel="shortcut icon" href="Ethan Rowe Logo.png">
         <link rel="stylesheet" href="styles.css" />
+        
         <script src="https://kit.fontawesome.com/9b7e07c388.js" crossorigin="anonymous"></script><!--This is so the icons at the bottom of the page work from Font Awesome.-->
        
     </head>
@@ -29,11 +30,15 @@
         <div class="body-content">
             <img src = "Portrait.png" class = "aFlexbox">
             <h1 class="aFlexbox">Hi, I'm Ethan Rowe.</h1>
-            
+          
             <p class="aFlexbox" id = "summary">I am an IT professional with experience in helpdesk support, NOC, as well as extensive hardware and software support remotely and in-person. I am an efficient problem solver, and I am passionate about coding. </p>
             <h2 class = "aFlexbox">Experience</h2>
+           
             <div class = "grid" id = "first">
+            
             <div class="aFlexbox2"><!-- Here is the most recent job experience section.-->
+                <button class = "button" id = "showButton1" onclick = show1()>Show More</button>
+                <button id = "hideButton1" onclick = hide1()>Show Less</button>
                 <div class="section">
                 <p>IT Helpdesk Technician</p>
                 <p>March 2022 - April 2024</p> 
@@ -74,6 +79,8 @@
             </div>
             <div class = "grid" id = "second"> 
             <div class="aFlexbox2"><!-- Here is older job experience section.-->
+                <button class = "button" id = "showButton2" onclick = show2()>Show More</button>
+                <button id = "hideButton2" onclick = hide2()>Show Less</button>
                 <div class = "section">
                 <p>Transmissions Assembly Technician</p> 
                 <p>August 2019 - March 2022</p> 
@@ -103,6 +110,8 @@
             </div>
             <div class = "grid" id = "third">
             <div class="aFlexbox2"><!-- Here is older job experience section.-->
+                <button class = "button" id = "showButton3" onclick = show3()>Show More</button>
+                <button id = "hideButton3" onclick = hide3()>Show Less</button>
                 <div class = "section">
                 <p>Line Lead</p> 
                 <p>December 2018 - June 2019</p> 
@@ -128,8 +137,10 @@
             </div>
             <div class = "grid" id = "fourth">
             <div class="aFlexbox2"><!-- Here is the oldest job experience section.-->
+                <button class = "button" id = "showButton4" onclick = show4()>Show More</button>
+                <button id = "hideButton4" onclick = hide4()>Show Less</button>
                 <div class = "section">
-                <p>Line Line Support</p> 
+                <p>Line Line Support</p>
                 <p>April 2018 - December 2018</p> 
                 <p>Ann's House of Nuts</p> 
                 <p>Robersonville, NC</p>
@@ -197,6 +208,7 @@
             <p class="footer-text">© Copyright 2024</p>
         </footer>
     </body>
+    <script src = "script.js"></script>
 </html>
 
 
