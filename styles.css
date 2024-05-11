@@ -3,13 +3,24 @@
   font-family: customFont;
   src:url(TitilliumWeb-Regular.ttf);
 }
-
+html{
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color:rgb(136, 189, 188);
+}
 ::selection{/*This sets the highlight coloring for the website.*/
   color: #112D32;/*This is the font color when it is highlighted*/
   background: #6E6658;/*This is the higlighted color behind text.*/
 }
 body{
+ /*This along with the footer positon being absolute make the footer stay at the bottom no matter the scale.*/
   min-height: 100vh;
+  display:  flex;/*The body has to be a flexbox, so that the header, body, and footer stay at the correct places on the website regardless of scale or zoom. */
+  flex-direction: column;
 }
 .button{
   position: absolute;
@@ -98,7 +109,7 @@ body{
 .header-content{
   display: flex;
   /*border: 2px solid yellow;*/
-  height: 10%;
+  
   width: 100%;
   background-color: rgb(136, 189, 188);
   font-weight: bold;
@@ -141,17 +152,18 @@ h2{
   margin-bottom: 20px;
 }
 .body-content{
-  height: 100%;
-  width: 100%;
-  /*border: 2px solid red;*/
-  background-color:rgb(136, 189, 188);
+  height: 90%;
   display: flex;
   align-items: center;
-  display: flex;
-  justify-content: space-around;
-  /*flex-direction: column;*/
   flex-direction: column;
   padding: 20px;
+  justify-content: space-around;
+}
+.bodyFlexbox{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 #Exp{
   width: 600px;
@@ -201,9 +213,8 @@ footer{
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bold;
-  bottom: 0;
   width:100%;
- 
+  margin-top:auto;
 }
 .footer-text{/*This is for the text in the footer*/
   margin-bottom: 0px;
@@ -299,18 +310,13 @@ a{
   width: 15px;
   background: linear-gradient(#112D32, #254E58, #112D32);
 }
-
 #contactPage{
-  height: 100%;
-  width: 100%;
-  
   background-color:rgb(136, 189, 188);
   display: flex;
   align-items: center;
-  min-height: 1080px;
-  
   flex-direction: column;
   padding: 20px;
+  
 }
 #nameRow{
   display: flex;
@@ -321,11 +327,8 @@ a{
 .contactForm{
   display: flex;
   flex-direction: column;
-  min-height: 500px;
-
   overflow: hidden;
   padding: 25px;
-  
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
