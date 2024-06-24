@@ -3,15 +3,12 @@
   font-family: customFont;
   src:url(TitilliumWeb-Regular.ttf);
 }
+
 html{
   height: 100%;
+  cursor: url('cursor.png'), auto;
 }
-body{
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-color:rgb(136, 189, 188);
-}
+
 ::selection{/*This sets the highlight coloring for the website.*/
   color: #112D32;/*This is the font color when it is highlighted*/
   background: #6E6658;/*This is the higlighted color behind text.*/
@@ -21,69 +18,111 @@ body{
   min-height: 100vh;
   display:  flex;/*The body has to be a flexbox, so that the header, body, and footer stay at the correct places on the website regardless of scale or zoom. */
   flex-direction: column;
+  background-color: #14242f;
+  margin: 0;
+  padding: 0;
+  color: #BAE8E8;
+}
+*{
+  color: #c9dbe8 !important;
+}
+#Title{
+  margin-top: 25%;
 }
 .button{
+  cursor: url('Finger.png'), auto;
   position: absolute;
   height: 40px;
   width: 115px;
-  margin-left: 215px;
-  margin-top: 328px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
-  border-radius:10px;
+  margin-left: 400px;
+  margin-top: 100px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
+  
   transition: 0.3s;
 }
 .button:hover{
   transform: scale(1.15);
 }
-
-#hideButton1{
+#hideButton0{
+  cursor: url('Finger.png'), auto;
   display: none;
   position: absolute;
   height: 40px;
   width: 115px;
-  margin-left: 215px;
-  margin-top: 1445px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
+  margin-left: 400px;
+  margin-top: 1300px;/*This is the height of show less button*/
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
+  border-radius:10px;
+  transition: 0.3s;
+}
+#hideButton1{
+  cursor: url('Finger.png'), auto;
+  display: none;
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  margin-left: 400px;
+  margin-top: 1250px;/*This is the height of show less button*/
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
   border-radius:10px;
   transition: 0.3s;
 }
 #hideButton2{
+  cursor: url('Finger.png'), auto;
   display: none;
   position: absolute;
   height: 40px;
   width: 115px;
-  margin-left: 215px;
-  margin-top: 1320px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
+  margin-left: 400px;
+  margin-top: 980px;/*This is the height of show less button*/
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
   border-radius:10px;
   transition: 0.3s;
 }
 #hideButton3{
+  cursor: url('Finger.png'), auto;
   display: none;
   position: absolute;
   height: 40px;
   width: 115px;
-  margin-left: 215px;
-  margin-top: 865px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
+  margin-left: 400px;
+  margin-top: 675px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
   border-radius:10px;
   transition: 0.3s;
 }
 #hideButton4{
+  cursor: url('Finger.png'), auto;
   display: none;
   position: absolute;
   height: 40px;
   width: 115px;
-  margin-left: 215px;
-  margin-top: 590px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
+  margin-left: 400px;
+  margin-top: 550px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #BAE8E8;
   border-radius:10px;
   transition: 0.3s;
+}
+#hideButton0:hover{
+  transform: scale(1.15);
 }
 #hideButton1:hover{
   transform: scale(1.15);
@@ -108,23 +147,19 @@ body{
 }
 .header-content{
   display: flex;
-  /*border: 2px solid yellow;*/
-  
   width: 100%;
-  background-color: rgb(136, 189, 188);
   font-weight: bold;
 }
 .header-content ul{
   display: flex;
   flex-grow:1;/*This makes the holder for the about and contact buttons stay at the top right of the screen.*/
   justify-content: flex-end;
-  /*border: 2px solid green;*/
   margin-right: 15px;
 }
-
 #ID{/*This is the logo at the top left of the page.*/
   /*border: 2px solid pink;*/
   margin: 15px;
+  height: 60px;
 }
 .header-content li{
   /*border: 2px solid orange;*/
@@ -165,9 +200,6 @@ h2{
   flex-direction: column;
   justify-content: space-around;
 }
-#Exp{
-  width: 600px;
-}
 .aList{
   margin-left: 23px;
 }
@@ -176,31 +208,44 @@ li{
 }
 .section{
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .section2{
   margin-top: 20px;
   margin-bottom: 100px;
+  
+
 }
 .aFlexbox{
-  width: 600px;
+  width: 1000px;
+
+}
+.aCenteredFlexbox{
+  width: 1000px;
+  text-align: center;
+  
 }
 .grid{
   margin: 20px;
 	padding: 2px;
 	transition: grid-template-rows 1s;
 	display: grid;
-	grid-template-rows:  399px;
+  grid-template-rows:  190px;/*length of the experience boxes before they expand.*/
+
   border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
 }
+
 .aFlexbox2{
+  
   overflow: hidden;
   padding: 25px;
-  max-width: 600px;
+  max-width: 1000px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   border-radius: 10px;/*Rounds off the edges of the boxes the experience info is in.*/
   transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
+
+  
 }
 .aFlexbox2:hover{
   transform: scale(1.015);
@@ -209,7 +254,7 @@ li{
   transform: scale(1.015);
 }
 footer{
-  background-color: #254E58;
+ 
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -217,23 +262,24 @@ footer{
   margin-top:auto;
 }
 .footer-text{/*This is for the text in the footer*/
+  
   margin-bottom: 0px;
   text-align: center;
 }
 #shortcuts{
+  
   color:rgb(136, 189, 188);
   margin: 10px;
   transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
 }
 #shortcuts:hover{
+  
   transform: scale(2);
 }
 /*This code is to animate the header href links when hovering over them with the cursor. I altered the code to fit my use, but original animation is from: https://codepen.io/jesperkc/pen/YaGYRr*/
 a{
- 
   color: #000;
   span{
-    
     font-size: 18px;
     font-weight: normal;
     transition: all .4s;
@@ -304,19 +350,19 @@ a{
   width: 15px;
 }
 ::-webkit-scrollbar-track{
-  background-color: rgb(136, 189, 188);
+  background-color: #14242f;
+  
 }
 ::-webkit-scrollbar-thumb{
   width: 15px;
-  background: linear-gradient(#112D32, #254E58, #112D32);
+  background-color: #c9dbe8;
 }
 #contactPage{
-  background-color:rgb(136, 189, 188);
+  color: #112D32;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  
 }
 #nameRow{
   display: flex;
@@ -324,6 +370,7 @@ a{
   justify-content: center;
  
 }
+
 .contactForm{
   display: flex;
   flex-direction: column;
@@ -335,7 +382,6 @@ a{
   transition:0.3s;/*This is responsible for the flexbox scale growth transition.*/
 }
 .input-fieldName{
-  
   width: 247px;
   height: 40px;
   margin-top: 20px;
@@ -354,16 +400,20 @@ a{
   border: 1px solid #777;
   border-radius: 10px;
   outline: none;
-  
+  background-color: #c9dbe8;
+  color: #14242f !important;
 }
 #submitButton{
   height: 40px;
   width: 115px;
-  background-color:#112D32;
-  color:rgb(136, 189, 188);
+  background-color: #c9dbe8;
   border-radius:10px;
   margin-top: 10px;
+  margin-left: 190px;
   transition: 0.3s;
+  padding: 0;
+  border: none;
+  color: #14242f !important;
 }
 #submitButton:hover{
   transform: scale(1.15);
@@ -374,3 +424,57 @@ a{
 form{
   max-width: 500px;
 }
+
+/*Here is the animation for the text on the main page.*/
+.fadeIn1 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fadeIn1 {
+  -webkit-animation-delay: 1.25s;
+  -moz-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+@keyframes fadeIn1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1; 
+  }
+}
+.fadeIn1 {
+  margin-right: 15px;
+  display: inline-block;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+.fadeIn2 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fadeIn2 {
+  -webkit-animation-delay: 1.25s;
+  -moz-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+}
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1; 
+  }
+}
+.fadeIn2 {
+  display: inline-block;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
