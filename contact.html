@@ -5,40 +5,67 @@
         <meta charset="UTF-8 "/>
         <meta name="viewport" content=""width=device-width, initial-scale="1.0" />
         <title>Ethan Rowe</title>
+        <link rel="shortcut icon" href="Ethan Rowe Logo.png">
         <link rel="stylesheet" href="styles.css" />
+        
+        <script src="https://kit.fontawesome.com/9b7e07c388.js" crossorigin="anonymous"></script><!--This is so the icons at the bottom of the page work from Font Awesome.-->
+       
     </head>
     <body>
-        <div class="holder">
-            <div class="header">
-                <ul>
-                    <li>
-                        <a href = "contact.html" sclas="hover-shadow hover-color">
-                            <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "about.html" sclas="hover-shadow hover-color">
-                            <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "index.html"sclas="hover-shadow hover-color">
-                            <span>H</span><span>O</span><span>M</span><span>E</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="Body">
-                <h1 class="notice" >Contact page is under construction...</h1>
-               
-               
-                
-
-            </div>
-            <div class="footer">
-                <p class="footer-text">Wesbite Designed and Created by Ethan Rowe</p>
-                <p class="version-text">Version 1.0 2024</p>
-            </div>
+        <div class = "header-content">
+            <img src = "Ethan Rowe Logo.png" id="ID" height="50"width="80" >
+            <ul class="no-bullets">  
+                <li class="no-bullets">
+                    <a href = "index.html" sclas="hover-shadow hover-color" >
+                        <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+                    </a>
+                </li>
+                <li class="no-bullets" >
+                    <a href = "contact.html" sclas="hover-shadow hover-color" >
+                        <span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id = "contactPage">
+            <h2>Let's Connect.</h2>
+                <div class = contactForm>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                   
+                    <input type="hidden" name="access_key" value="4c1be9af-3f0a-4a76-85f5-595e4c03bf0d">
+                    <input type="text" id = "input-field" name="name" placeholder = "First and Last Name"required>
+                    <input type="email" id = "input-field" name="email" placeholder = "Your Email" required>
+                    <textarea id = "input-field" class = "message" name= "message" placeholder = " Message" required ></textarea>
+                    <button type="submit" id = "submitButton">Submit</button>
+                    
+                </div>
+            </form>
         </div>
     </body>
+    <footer>
+        <div class = "footer-text">
+            <a href="https://www.linkedin.com/in/ethan-rowe-a122611b3/" target=_blank> <i class="fa-brands fa-linkedin" id = "shortcuts"  ></i></a>
+            
+            <a href="https://github.com/ethanrowe2000/my-Repository.git" target=_blank> <i class="fa-brands fa-github" id = "shortcuts"></i></a>
+           
+            
+                <a href = "Resume-Ethan-Rowe.pdf" download>
+                    <i class="fa-solid fa-file" id = "shortcuts"></i>
+                </a><!--Here is the button to download my resume, which is at the bottom of the page.-->
+
+            </i>
+            </div>
+    </div>
+        <p class="footer-text">Designed and Created by Ethan Rowe</p>
+        <p class="footer-text">© Copyright 2024</p>
+    </footer>
+    <script src = "script.js"></script>
+    
 </html>
+
+
+
+
+
+
+
