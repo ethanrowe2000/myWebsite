@@ -217,11 +217,12 @@ li{
 
 }
 .aFlexbox{
-  width: 1000px;
-
+  max-width: 1000px;
+  width: 90%;
 }
 .aCenteredFlexbox{
-  width: 1000px;
+  max-width: 1000px;
+  width: 80%;
   text-align: center;
   
 }
